@@ -1,34 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming Soon</title>
-    <style>
-        body {
-            background: #1e1e1e;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MHUTE CONSTRUCTION — From Ground to Greatness</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Montserrat', 'ui-sans-serif', 'system-ui'],
+                        body: ['Inter', 'ui-sans-serif', 'system-ui']
+                    },
+                    colors: {
+                        brand: '#4A5568',
+                        accent: '#C2410C'
+                    },
+                    boxShadow: {
+                        soft: '0 10px 30px rgba(0,0,0,0.1)'
+                    }
+                }
+            }
         }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 0.3em;
-        }
-        p {
-            color: #bbbbbb;
-            font-size: 1.2em;
-        }
-    </style>
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>html { scroll-behavior: smooth; }</style>
 </head>
-<body>
-    <h1>Coming Soon</h1>
-    <p>Our website is under construction. Stay tuned for something amazing!</p>
+
+<body class="font-body text-brand bg-white">
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+            <a href="#top" class="font-display font-extrabold text-lg tracking-wide">MHUTE <span class="text-gray-500">CONSTRUCTION</span></a>
+            <nav class="hidden md:flex gap-6">
+                <a href="#about" class="hover:text-accent">About</a>
+                <a href="#services" class="hover:text-accent">Services</a>
+                <a href="#gallery" class="hover:text-accent">Projects</a>
+                <a href="#contact" class="hover:text-accent">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="top" class="pt-24 text-white relative">
+        <img src="assets/hero-image.jpg"
+             class="absolute inset-0 w-full h-full object-cover -z-10" alt="">
+        <div class="absolute inset-0 bg-black/60 -z-5"></div>
+        <div class="relative max-w-5xl mx-auto px-4 text-center py-28">
+            <h1 class="font-display font-extrabold text-4xl md:text-6xl mb-4">From Ground to Greatness</h1>
+            <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">Trusted construction services for residential and commercial projects in Harare, Zimbabwe.</p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-accent text-white px-6 py-3 font-semibold hover:bg-orange-700">Get in touch</a>
+                <a href="#services" class="border border-gray-300 px-6 py-3 hover:bg-white hover:text-brand">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="font-display text-3xl font-extrabold mb-4">Who We Are</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Mhute Construction is a trusted construction company based in Harare, Zimbabwe, specializing in residential and commercial building projects. We offer comprehensive construction services including new builds, renovations, extensions, and property maintenance. With a commitment to quality workmanship, timely project delivery, and competitive pricing, we work closely with clients to bring their vision to life. Our experienced team handles everything from initial design consultation through to final completion.
+            </p>
+        </div>
+        <div>
+            <img src="assets/image-1.jpg"
+                 class="shadow-soft w-full h-80 object-cover" alt="">
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="font-display text-3xl font-extrabold mb-4">Our Services</h2>
+            <p class="text-gray-700 mb-10">Comprehensive construction services for residential and commercial projects.</p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 shadow-soft border border-gray-100">
+                    <h3 class="font-semibold text-lg mb-2">New Builds</h3>
+                    <p class="text-gray-600 text-sm">Complete construction of residential and commercial properties from foundation to finish.</p>
+                </div>
+
+                <div class="bg-white p-6 shadow-soft border border-gray-100">
+                    <h3 class="font-semibold text-lg mb-2">Renovations</h3>
+                    <p class="text-gray-600 text-sm">Transform existing spaces with expert renovation and remodeling services.</p>
+                </div>
+
+                <div class="bg-white p-6 shadow-soft border border-gray-100">
+                    <h3 class="font-semibold text-lg mb-2">Extensions</h3>
+                    <p class="text-gray-600 text-sm">Expand your property with seamlessly integrated building extensions.</p>
+                </div>
+
+                <div class="bg-white p-6 shadow-soft border border-gray-100">
+                    <h3 class="font-semibold text-lg mb-2">Property Maintenance</h3>
+                    <p class="text-gray-600 text-sm">Ongoing maintenance and repair services to keep your property in top condition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-20 max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-end mb-8">
+            <h2 class="font-display text-3xl font-extrabold">Recent Projects</h2>
+            <a href="#contact" class="text-accent font-medium hover:text-orange-700">Get a quote →</a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="assets/image-2.jpg" class="object-cover h-56 w-full" alt="">
+            <img src="assets/image-3.jpg" class="object-cover h-56 w-full" alt="">
+            <img src="assets/image-4.jpg" class="object-cover h-56 w-full" alt="">
+            <img src="assets/image-5.jpg" class="object-cover h-56 w-full" alt="">
+            <img src="assets/image-6.jpg" class="object-cover h-56 w-full" alt="">
+            <img src="assets/hero-image.jpg" class="object-cover h-56 w-full" alt="">
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-display text-3xl font-extrabold mb-4">Get In Touch</h2>
+            <p class="text-gray-300 mb-8">We'd love to hear about your project. Call, email, or send us a message.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left text-gray-200 mb-10">
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 text-accent">Call Us</h3>
+                    <p><a href="tel:+263774721305" class="hover:underline">+263 77 472 1305</a></p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 text-accent">Email</h3>
+                    <p><a href="mailto:info@mhuteconstruction.com" class="hover:underline">info@mhuteconstruction.com</a></p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 text-accent">Location</h3>
+                    <p>2007 Garden Lane<br>Aspindale Park<br>Harare, Zimbabwe</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-4">
+                <a href="tel:+263774721305" class="bg-accent text-white px-6 py-3 font-semibold hover:bg-orange-700">Call Now</a>
+                <a href="https://wa.me/263774721305" class="bg-green-600 text-white px-6 py-3 font-semibold hover:bg-green-700">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-6 text-center text-sm text-gray-500 border-t border-gray-200">
+        © 2025 MHUTE CONSTRUCTION — From Ground to Greatness
+    </footer>
 </body>
 </html>
